@@ -19,77 +19,99 @@
     <title>Image Editor V1 | Kenny Choi</title>
 </head>
 <body>
-    <div class="container">
-        <div class="img__container">
-            <div class="img">
-
-            </div>
-        </div>
-
-        <div class="controls">
-            <h1 class="control__header">
-                
+    <div class="wrapper">
+        <div class="header__main">
+            <h1 class="header__main--title">
+                Image Editor
             </h1>
-            <form class="controls__elements">
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Brightness
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Contrast
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Saturation
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Drop-Shadow
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Blur
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Sepia
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Invert
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Opacity
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-                <div class="controls__element">
-                    <label for="controls__brightness" class="controls__element--header">
-                        Hue-Rotate
-                    </label>
-                    <input type="range" id="controls__brightness" name="Brightness" min="0" max="100" step="1">
-                </div>
-            </form>
         </div>
 
-    </div>
-    
+        <div class="container-fluid">
+            <div class="img__container">
+                <div class="img">
+                    <!-- <img src="./assets/img/doggos.jpg" alt="A group of fluffy puppers" class="img--active"> -->
+                </div>
+            </div>
+
+           
+
+        </div>
+        <div class="controls">
+                <div class="controls__header--bar">
+                    <h1 class="controls__header">
+                        Express Image Editor 
+                    </h1>
+                    <a href="#" class="controls__header--reset">Reset</a>
+                </div>
+                    
+                <form class="controls__elements">
+                    <div class="controls__element">
+                        <label for="controls__brightness" class="controls__element--header">
+                            Brightness
+                        </label>
+                        <input type="range" id="controls__brightness" class="controls__slider" name="brightness" min="0" max="200" step="1" value="100">
+                    </div>
+                    <div class="controls__element">
+                        <label for="controls__contrast" class="controls__element--header">
+                            Contrast
+                        </label>
+                        <input type="range" id="controls__contrast" class="controls__slider" name="contrast" min="0" max="200" step="1" value="100">
+                    </div>
+                    <div class="controls__element">
+                        <label for="controls__saturation" class="controls__element--header">
+                            Saturation
+                        </label>
+                        <input type="range" id="controls__saturation" class="controls__slider" name="saturation" min="0" max="200" step="1" value="100">
+                    </div>
+                    <div class="controls__element">
+                        <label for="controls__opacity" class="controls__element--header">
+                            Opacity
+                        </label>
+                        <input type="range" id="controls__opacity" class="controls__slider" name="opacity" min="0" max="100" step="1" value="100">
+                    </div>
+                    <div class="controls__element">
+                        <label for="controls__blur" class="controls__element--header">
+                            Blur
+                        </label>
+                        <input type="range" id="controls__blur" class="controls__slider" name="blur" min="0" max="20" step="1" value="0">
+                    </div>
+                    <div class="controls__element">
+                        <label for="controls__sepia" class="controls__element--header">
+                            Sepia
+                        </label>
+                        <input type="range" id="controls__sepia" class="controls__slider" name="sepia" min="0" max="100" step="1" value="0">
+                    </div>
+                    <div class="controls__element">
+                        <label for="controls__invert" class="controls__element--header">
+                            Invert
+                        </label>
+                        <input type="range" id="controls__invert" class="controls__slider" name="invert" min="0" max="100" step="1" value="0">
+                    </div>
+                    <div class="controls__element">
+                        <label for="controls__huerotate" class="controls__element--header">
+                            Hue-Rotate
+                        </label>
+                        <input type="range" id="controls__huerotate" class="controls__slider" name="hue-rotate" min="0" max="359" step="1" value="0">
+                    </div>
+                </form>
+
+                <form class="controls__input">
+                    <div class="controls__input--wrapper">
+                        <!-- <label for="controls__url" class="controls__element--header">
+                            Enter an image url...
+                        </label> -->
+                        <input type="text" id="controls__url" class="controls__url--input" name="Image URL" placeholder="Enter an image URL...">
+                    </div>
+                    <input type="submit" class="controls__input--btn">
+                </form>
+        </div>
+
+        <div class="footer__main">
+            <h1 class="footer__main--title">
+                Brought to you by Kenny Choi
+            </h1>
+        </div>
+</div>
 
 
 
