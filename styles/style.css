@@ -213,7 +213,9 @@ input.controls__input--btn {
     color: #fff;
 }
 
-
+button.controls__input--btn-random {
+    color: rgba(255,255,255,0.7);
+}
 
 
 
