@@ -1,16 +1,16 @@
 // DOM Elements
-let brightness = document.querySelector('#controls__brightness');
-let contrast = document.querySelector('#controls__contrast');
-let saturation = document.querySelector('#controls__saturation');
-let opacity = document.querySelector('#controls__opacity');
-let blur = document.querySelector('#controls__blur');
-let sepia = document.querySelector('#controls__sepia');
-let invert = document.querySelector('#controls__invert');
-let hueRotate = document.querySelector('#controls__huerotate');
+let brightness = document.querySelector('.ctrl__brightness');
+let contrast = document.querySelector('.ctrl__contrast');
+let saturation = document.querySelector('.ctrl__saturation');
+let opacity = document.querySelector('.ctrl__opacity');
+let blur = document.querySelector('.ctrl__blur');
+let sepia = document.querySelector('.ctrl__sepia');
+let invert = document.querySelector('.ctrl__invert');
+let hueRotate = document.querySelector('.ctrl__huerotate');
 
 const controls = document.querySelector('.controls__elements');
 const controlSliders = document.querySelectorAll('.controls__slider');
-const image = document.querySelector('.img');
+const image = document.querySelector('.img__active');
 let urlForm = document.querySelector('.controls__input');
 let reset = document.querySelector('.controls__header--reset');
 let randomImgBtn = document.querySelector('.controls__input--btn-random');
@@ -49,6 +49,7 @@ function customImage(e) {
 
 // Update the image
 function sliderChange(e) {
+    console.log(e.target.value);
         image.style.filter = `brightness(${brightness.value}%) contrast(${contrast.value}%) saturate(${saturation.value}%) blur(${blur.value}px) sepia(${sepia.value}%) invert(${invert.value}%) opacity(${opacity.value}%) hue-rotate(${hueRotate.value}deg)`;
 }
 

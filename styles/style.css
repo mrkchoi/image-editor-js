@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 .wrapper {
@@ -41,18 +42,13 @@ body {
     width: 100%;
 }
 
-.img {
+.img__active {
     width: 100%;
     background-image: url('../assets/img/doggos.jpg');
     background-size: cover;
     background-position: center center;
     height: 100%;
     filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) sepia(0%) invert(0%) opacity(100%) hue-rotate(0deg);
-}
-
-.img--active {
-    width: 100%;
-    filter: blur(10px);
 }
 
 /* CONTROLS */
@@ -144,7 +140,7 @@ input[type=range] {
   }
   
 .controls {
-    min-width: 32rem;
+    width: 23rem;
     margin: 0 1.4rem 4.4rem;
     /* padding: 3rem 4rem; */
     position: fixed;
@@ -181,12 +177,13 @@ input[type=range] {
     margin: 1rem 2rem;
 }
 .controls__element {
-    margin-bottom: 2.4rem;
+    margin-bottom: 0.6rem;
 }
 
 label.controls__element--header {
     margin: 0;
-    margin-bottom: -7px;
+    margin-bottom: -2px;
+    font-size: 1.1rem;
 }
 
 .controls__element--header {
@@ -208,29 +205,36 @@ input#controls__url {
     color: black;
 }
 
-.controls__input--wrapper {}
+.controls__btn--wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 input.controls__input--btn {
     color: #fff;
+    /* width: 100%; */
 }
 
 button.controls__input--btn-random {
     color: rgba(255,255,255,0.7);
+    padding: 0 18px;
 }
 
-
-
-
 /* FOOTER */
-.footer__main {
+.footer__main--desktop {
     background-color: #333436;
     color: #d4d4d4;
     text-align: center;
     width: 100%;
     height: 3rem;
-
 }
-.footer__main--title {
+.footer__main--title-desktop {
     font-size: 1.6rem;
     margin: 0;
     padding: 5px;
+}
+
+@media only screen and (max-width: 550px) {
+    .controls {
+        margin: 0 0 3rem;
+    }
 }

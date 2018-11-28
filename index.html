@@ -11,6 +11,9 @@
     <!-- Materalize CSS [Compiled and minified] -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">   -->
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <!-- Skeleton CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
 
@@ -28,7 +31,7 @@
 
         <div class="container-fluid">
             <div class="img__container">
-                <div class="img">
+                <div class="img__active">
                     <!-- <img src="./assets/img/doggos.jpg" alt="A group of fluffy puppers" class="img--active"> -->
                 </div>
             </div>
@@ -49,49 +52,49 @@
                         <label for="controls__brightness" class="controls__element--header">
                             Brightness
                         </label>
-                        <input type="range" id="controls__brightness" class="controls__slider" name="brightness" min="0" max="200" step="1" value="100">
+                        <input type="range" id="controls__brightness" class="controls__slider ctrl__brightness" name="brightness" min="0" max="200" step="1" value="100">
                     </div>
                     <div class="controls__element">
                         <label for="controls__contrast" class="controls__element--header">
                             Contrast
                         </label>
-                        <input type="range" id="controls__contrast" class="controls__slider" name="contrast" min="0" max="200" step="1" value="100">
+                        <input type="range" id="controls__contrast" class="controls__slider ctrl__contrast" name="contrast" min="0" max="200" step="1" value="100">
                     </div>
                     <div class="controls__element">
                         <label for="controls__saturation" class="controls__element--header">
                             Saturation
                         </label>
-                        <input type="range" id="controls__saturation" class="controls__slider" name="saturation" min="0" max="200" step="1" value="100">
+                        <input type="range" id="controls__saturation" class="controls__slider ctrl__saturation" name="saturation" min="0" max="200" step="1" value="100">
                     </div>
                     <div class="controls__element">
                         <label for="controls__opacity" class="controls__element--header">
                             Opacity
                         </label>
-                        <input type="range" id="controls__opacity" class="controls__slider" name="opacity" min="0" max="100" step="1" value="100">
+                        <input type="range" id="controls__opacity" class="controls__slider ctrl__opacity" name="opacity" min="0" max="100" step="1" value="100">
                     </div>
                     <div class="controls__element">
                         <label for="controls__blur" class="controls__element--header">
                             Blur
                         </label>
-                        <input type="range" id="controls__blur" class="controls__slider" name="blur" min="0" max="20" step="1" value="0">
+                        <input type="range" id="controls__blur" class="controls__slider ctrl__blur" name="blur" min="0" max="20" step="1" value="0">
                     </div>
                     <div class="controls__element">
                         <label for="controls__sepia" class="controls__element--header">
                             Sepia
                         </label>
-                        <input type="range" id="controls__sepia" class="controls__slider" name="sepia" min="0" max="100" step="1" value="0">
+                        <input type="range" id="controls__sepia" class="controls__slider ctrl__sepia" name="sepia" min="0" max="100" step="1" value="0">
                     </div>
                     <div class="controls__element">
                         <label for="controls__invert" class="controls__element--header">
                             Invert
                         </label>
-                        <input type="range" id="controls__invert" class="controls__slider" name="invert" min="0" max="100" step="1" value="0">
+                        <input type="range" id="controls__invert" class="controls__slider ctrl__invert" name="invert" min="0" max="100" step="1" value="0">
                     </div>
                     <div class="controls__element">
                         <label for="controls__huerotate" class="controls__element--header">
                             Hue-Rotate
                         </label>
-                        <input type="range" id="controls__huerotate" class="controls__slider" name="hue-rotate" min="0" max="359" step="1" value="0">
+                        <input type="range" id="controls__huerotate" class="controls__slider ctrl__huerotate" name="hue-rotate" min="0" max="359" step="1" value="0">
                     </div>
                 </form>
 
@@ -101,18 +104,17 @@
                             Enter an image url...
                         </label> -->
                         <input type="text" id="controls__url" class="controls__url--input" name="Image URL" placeholder="Enter an image URL...">
+                        <div class="control__btn--wrapper">
+                            <input type="submit" class="controls__input--btn" value="GO">
+                            <button href="#" class="controls__input--btn-random">Random</button>
+                        </div>
                     </div>
-                    <div class="control__btn--wrapper">
-                        <input type="submit" class="controls__input--btn">
-                        <button href="#" class="controls__input--btn-random">Get random image...</button>
-                    </div>
+                    
                 </form>
         </div>
 
-        <div class="footer__main">
-            <h1 class="footer__main--title">
-                Brought to you by Kenny Choi
-            </h1>
+        <div class="footer__main--desktop">
+            <h1 class="footer__main--title-desktop">Brought to you by Kenny Choi</h1>
         </div>
 </div>
 
